@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>To Do</h1>
+    <div class="">
+      <h2 class="task-list-title">Projects</h2>
+      <ul class="project-list" data-projects></ul>
+
+      <form action="" data-new-project>
+        <input
+          type="text"
+          class="new project"
+          data-new-project-input
+          placeholder="new project name"
+          aria-label="new project name"
+        />
+        <button class="btn create" aria-label="create new project">+</button>
+      </form>
+    </div>
+
+    <div class="todo-project" data-project-task-container>
+      <div class="todo-header">
+        <h2 class="project-title" data-project-title>YouTube</h2>
+        <p class="task-count" data-count>3 tasks remaining</p>
+      </div>
+
+      <div class="todo-body">
+        <div class="tasks" data-tasks></div>
+
+        <div class="new-task">
+          <form action="" data-new-task>
+            <input
+              type="text"
+              data-new-task-input
+              class="new task"
+              placeholder="new task name"
+              aria-label="new task name"
+            />
+            <button class="btn create" aria-label="create new task">+</button>
+          </form>
+        </div>
+
+        <div class="delete">
+          <button class="btn delete" data-clear-complete-btn>
+            Clear completed tasks
+          </button>
+          <button class="btn delete" data-delete-project-btn>
+            Delete project
+          </button>
+        </div>
+      </div>
+    </div>
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template>
+    <script src="./main.js" async defer></script>
+  </body>
+</html>
